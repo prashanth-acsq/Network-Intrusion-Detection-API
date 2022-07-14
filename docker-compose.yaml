@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  app:
+    image: ${DOCKER_USERNAME}/network-intrusion-detection-api:1.0
+    ports:
+      - "4006:4006"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+  
